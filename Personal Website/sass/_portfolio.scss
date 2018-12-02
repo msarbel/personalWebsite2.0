@@ -1,0 +1,62 @@
+.portfolios {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(to bottom, rgba($color-secondary, .75),rgba($color-secondary, .9)), url(/img/billy-huynh-278252-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+        //style
+        padding: 8rem;
+
+        // create grid within grid
+        display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+        grid-gap: 6rem;
+        align-items: start;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        }
+}
+
+.portfolio {
+    
+    display: grid;
+    background-color: rgba($color-grey-dark-1, .5);
+    color: #fff;
+    border-radius: 5px;
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__name {
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: end;
+        transform: translateY(-50%);
+        z-index: 3;
+
+        width: 80%;
+        border-radius: 5px;
+
+        font-family: $font-display;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1.25rem;
+        background-image: linear-gradient(to bottom, rgba($color-secondary, 1),rgba($color-grey-dark-1, 1)); 
+        color: #fff;
+        font-weight: 400;
+    }
+
+    &__text {
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
+
+    &__btn {
+        grid-column: 1 / -1;
+        background-color: $color-grey-dark-1;
+    }
+}

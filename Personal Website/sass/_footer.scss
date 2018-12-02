@@ -1,0 +1,32 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+    color: #fff;
+    padding: 8rem;
+}
+
+.nav {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    &__link:link,
+    &__link:visited {
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+        font-family: $font-display;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+
+    }
+}
